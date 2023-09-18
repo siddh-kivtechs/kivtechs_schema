@@ -27,6 +27,15 @@ graph LR
 graph LR
  subgraph 1A: Main Page
         1A["Main Page"]
+        IP:string
+        UA:string
+        latitude:number
+        longitude:number
+        place:string
+        date:date
+        time:time
+        unique_id:string
+        session_cookie:string
     end
     subgraph 2A: Sign In
         2A["Sign In"]
