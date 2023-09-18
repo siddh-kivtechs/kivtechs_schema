@@ -1,0 +1,38 @@
+{
+  "$schema": "register_schema_draft",
+  "$id": "2b",
+  "title": "Register Schema",
+  "description": "A schema for the register step in the flow.",
+  "type": "object",
+  "properties": {
+    "username": {
+      "type": "string",
+      "minLength": 1
+    },
+    "email": {
+      "type": "string",
+      "format": "email"
+    },
+    "password": {
+      "type": "string",
+      "minLength": 1
+    },
+    "verify_password": {
+      "type": "string",
+      "minLength": 1
+    },
+    "contact_number": {
+      "type": "string",
+      "minLength": 1
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "organization": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": ["username", "email", "password", "verify_password", "contact_number", "name", "organization"]
+}
