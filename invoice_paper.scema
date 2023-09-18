@@ -1,0 +1,146 @@
+{
+  "$schema": "invoice_schema",
+  "$id": "4d.json",
+  "title": "Invoice Schema",
+  "description": "A schema for the invoice step in the flow.",
+  "type": "object",
+  "properties": {
+    "client-address": {
+      "type": "string"
+    },
+    "transactionDetails": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "detail": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "surveyID": {
+      "type": "string"
+    },
+    "paymentDetails": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "detail": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "creditDetails": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "detail": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "receiptBarcode": {
+      "type": "string"
+    },
+    "returnPolicy": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "detail": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "tripSummary": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "item": {
+            "type": "object",
+            "properties": {
+              "detail": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "feedback": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "detail": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "coupons": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "discount": {
+            "type": "string"
+          },
+          "discountDetails": {
+            "type": "string"
+          },
+          "expiration": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "item": {
+                  "type": "object",
+                  "properties": {
+                    "detail": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "barcode": {
+            "type": "string"
+          },
+          "barcodeID": {
+            "type": "string"
+          },
+          "legal": {
+            "type": "string"
+          },
+          "couponBottom": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "detail": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "KIVTECHS Card #": {
+            "type": "string"
+          },
+          "CPN#": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "required": ["client-address", "transactionDetails", "surveyID", "paymentDetails", "creditDetails", "receiptBarcode", "returnPolicy", "tripSummary", "feedback", "coupons"]
+}
