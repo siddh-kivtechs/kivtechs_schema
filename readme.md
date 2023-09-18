@@ -2,7 +2,7 @@
 
 
 ```mermaid
-graph TR
+graph TD
  subgraph 1A: Main Page
         1A["Main Page"]
     end
