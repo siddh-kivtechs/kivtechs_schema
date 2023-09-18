@@ -3,6 +3,9 @@
 
 ```mermaid
 graph LR
+ subgraph 1A: Main Page
+        1A["Main Page"]
+    end
     subgraph Sign In
         2A[Sign In]
     end
@@ -13,12 +16,18 @@ graph LR
         2C[OAuth]
     end
 
+    1A --> 2A
+    1A --> 2B
+    1A --> 2C
    
 
 ```
 
 ```mermaid
 graph LR
+ subgraph 1A: Main Page
+        1A["Main Page"]
+    end
     subgraph 2A: Sign In
         2A["Sign In"]
         username:string
@@ -43,8 +52,9 @@ graph LR
         scope:string
     end
 
-    2A --> 2B
-    2A --> 2C
+       1A --> 2A
+    1A --> 2B
+    1A --> 2C
 
 
 
