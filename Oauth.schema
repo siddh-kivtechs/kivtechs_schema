@@ -1,0 +1,26 @@
+{
+  "$schema": "oauth_draft_schema",
+  "$id": "oauth_2c",
+  "title": "OAuth Schema",
+  "description": "A schema for OAuth with information from commonly used third party providers Google, Microsoft, Github, and Instagram.",
+  "type": "object",
+  "properties": {
+    "provider": {
+      "type": "string",
+      "enum": ["google", "microsoft", "github", "instagram"]
+    },
+    "access_token": {
+      "type": "string"
+    },
+    "refresh_token": {
+      "type": "string"
+    },
+    "expires_in": {
+      "type": "integer"
+    },
+    "scope": {
+      "type": "string"
+    }
+  },
+  "required": ["provider", "access_token"]
+}
