@@ -24,13 +24,13 @@ graph LR
     subgraph 4B: Pricing Slabs Based on Users
         4B["Pricing Slabs Based on Users"]
     end
-    subgraph 4C: Pay Yearly, Monthly, Quarterly, Discount or Coupon Code
+    subgraph 4C:Pay
         4C["Pay Yearly, Monthly, Quarterly\nDiscount or Coupon Code"]
     end
-    subgraph 4D: Payment Gateway (PG) Confirmation
+    subgraph 4D:Payment_Gateway
         4D["Payment Gateway (PG) Confirmation"]
     end
-    subgraph 5A: Acknowledgement
+    subgraph 5A:Acknowledgement
         5A["Acknowledgement"]
     end
 
