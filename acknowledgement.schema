@@ -1,0 +1,97 @@
+{
+  "$schema": "acknowledgement_schema",
+  "$id": "5a",
+  "title": "Acknowledgement Schema",
+  "description": "A schema for the acknowledgement step in the flow.",
+  "type": "object",
+  "properties": {
+    "invoice_id": {
+      "type": "string"
+    },
+    "invoice_date": {
+      "type": "string"
+    },
+    "order_id": {
+      "type": "string"
+    },
+    "seller": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "address": {
+          "type": "string"
+        },
+        "pan": {
+          "type": "string"
+        },
+        "gstin": {
+          "type": "string"
+        }
+      },
+      "required": ["name", "address", "pan", "gstin"]
+    },
+    "customer": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "address": {
+          "type": "string"
+        },
+        "billing_address": {
+          "type": "string"
+        }
+      },
+      "required": ["name", "address", "billing_address"]
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "hsn_code": {
+            "type": "string"
+          },
+          "product_code": {
+            "type": "string"
+          },
+          "qty": {
+            "type": "integer"
+          },
+          "price": {
+            "type": "number"
+          },
+          "tax_rate": {
+            "type": "number"
+          },
+          "tax_amount": {
+            "type": "number"
+          },
+          "total_amount": {
+            "type": "number"
+          }
+        },
+        "required": ["name", "hsn_code", "product_code", "qty", "price", "tax_rate", "tax_amount", "total_amount"]
+      }
+    },
+    "grand_total": {
+      "type": "number"
+    },
+    "total_amount_in_words": {
+      "type": "string"
+    },
+    "declaration": {
+      "type": "string"
+    },
+    "signature": {
+      "type": "string"
+    }
+  },
+  "required": ["invoice_id", "invoice_date", "order_id", "seller", "customer", "items", "grand_total", "total_amount_in_words", "declaration", "signature"]
+}
